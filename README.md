@@ -5,7 +5,7 @@ A small PowerShell utility to toggle [PowerToys ZoomIt](https://learn.microsoft.
 ## Requirements
 
 - Windows 10/11
-- PowerToys installed (default path: `%LOCALAPPDATA%\Microsoft\PowerToys\`)
+- PowerToys installed (default path: `%LOCALAPPDATA%\PowerToys\`)
 - PowerShell 5.1 or PowerShell 7+
 
 ## Usage
