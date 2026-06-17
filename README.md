@@ -21,9 +21,9 @@ Opens a small dialog showing the current state of each toggle. Click **Apply & R
 ### Headless mode
 
 ```powershell
-.\zoomit.ps1 -Webcam on -Audio off
-.\zoomit.ps1 -Webcam off          # Audio left unchanged
-.\zoomit.ps1 -Audio on            # Webcam left unchanged
+.\zoomit-configure.ps1 -Webcam on -Audio off
+.\zoomit-configure.ps1 -Webcam off          # Audio left unchanged
+.\zoomit-configure.ps1 -Audio on            # Webcam left unchanged
 ```
 
 Parameters are independent — omitting one leaves that registry value as-is.
@@ -31,8 +31,8 @@ Parameters are independent — omitting one leaves that registry value as-is.
 ### Help
 
 ```powershell
-.\zoomit.ps1 -Help
-Get-Help .\zoomit.ps1 -Detailed   # equivalent
+.\zoomit-configure.ps1 -Help
+Get-Help .\zoomit-configure.ps1 -Detailed   # equivalent
 ```
 
 ## Creating a shortcut
@@ -40,7 +40,7 @@ Get-Help .\zoomit.ps1 -Detailed   # equivalent
 To launch the GUI without a console window, set the shortcut **Target** to:
 
 ```
-pwsh.exe -WindowStyle Hidden -NoProfile -File "C:\path\to\zoomit.ps1"
+pwsh.exe -WindowStyle Hidden -NoProfile -File "C:\path\to\zoomit-configure.ps1"
 ```
 
 For Windows PowerShell 5, use `powershell.exe` instead of `pwsh.exe`. Alternatively, place a `launcher.vbs` alongside the script:
@@ -48,7 +48,7 @@ For Windows PowerShell 5, use `powershell.exe` instead of `pwsh.exe`. Alternativ
 ```vbs
 CreateObject("WScript.Shell").Run "powershell -WindowStyle Hidden -File """ & _
     CreateObject("Scripting.FileSystemObject").GetParentFolderName(WScript.ScriptFullName) & _
-    "\zoomit.ps1""", 0
+    "\zoomit-configure.ps1""", 0
 ```
 
 ## Registry keys
