@@ -13,7 +13,7 @@ A small PowerShell utility to toggle [PowerToys ZoomIt](https://learn.microsoft.
 ### GUI mode
 
 ```powershell
-pwsh -WindowStyle Hidden -File .\zoomit.ps1
+pwsh -WindowStyle Hidden -File .\zoomit-configure.ps1
 ```
 
 Opens a small dialog showing the current state of each toggle. Click **Apply & Restart** to write the settings and restart ZoomIt.
